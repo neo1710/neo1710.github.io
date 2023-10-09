@@ -43,7 +43,8 @@ console.log(data);
   );
 
   return (
-    <Element name={"Projects"} id="projects">
+    <Element name={"Projects"} 
+    id="projects">
       <section className="section">
         <Container>
           <Container className="d-flex">
