@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c6aea74a.css",
-    "main.js": "/static/js/main.1d8f3db5.js",
+    "main.js": "/static/js/main.f1b1acbf.js",
     "static/media/styleSpot.png": "/static/media/styleSpot.8d7793ccdd3ff435d442.png",
     "static/media/hero-dark.jpg": "/static/media/hero-dark.37f2556d620821979e99.jpg",
     "static/media/techbazaar.png": "/static/media/techbazaar.1bcb4ffeb376de46e645.png",
@@ -13,10 +13,10 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.c6aea74a.css.map": "/static/css/main.c6aea74a.css.map",
-    "main.1d8f3db5.js.map": "/static/js/main.1d8f3db5.js.map"
+    "main.f1b1acbf.js.map": "/static/js/main.f1b1acbf.js.map"
   },
   "entrypoints": [
     "static/css/main.c6aea74a.css",
-    "static/js/main.1d8f3db5.js"
+    "static/js/main.f1b1acbf.js"
   ]
 }
