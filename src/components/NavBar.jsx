@@ -7,7 +7,7 @@ import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
 // Components
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 // Images
 import Logo from "./defaultNavLogo.svg";
 
@@ -134,9 +134,11 @@ export default function NavBar({ Logo }) {
                         >
                           {el.name}
                         </ScrollLink>
+                       
                       </Nav.Item>
                     );
                   })
+                  
                 : navLinks.routes.map((el) => {
                     return (
                       <Nav.Item key={el.id}>
@@ -151,9 +153,11 @@ export default function NavBar({ Logo }) {
                         >
                           {el.name}
                         </Link>
+                        
                       </Nav.Item>
                     );
                   })}
+                  <Button className="nav-link resume">Resume</Button>
             </Nav>
             <Nav>
               <ThemeToggle />

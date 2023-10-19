@@ -88,7 +88,8 @@ export default function Hero() {
       <Container>
         <Row className="align-items-center text-center">
           <Col>
-            <h1 className="mb-3 display-3 title">{name}</h1>
+            <h1 id="user-detail-name" className="mb-3 display-3 title">{name}</h1>
+            <h2 className="fswd">Full Stack Web Developer</h2>
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
             </div>

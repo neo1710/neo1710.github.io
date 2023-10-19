@@ -36,7 +36,7 @@ const StyledCardComponent = styled.div`
 export default function StyledCard({ image, name, description, url, demo }) {
   return (
     <StyledCardComponent>
-      <Card>
+      <Card className="project-card">
         <Card.Img
           variant="top"
           src={image ? image : GH}

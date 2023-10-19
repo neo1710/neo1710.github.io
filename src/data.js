@@ -20,7 +20,7 @@ export { HeroDark as Dark };
 export const githubUsername = "neo1710";
 
 // Navbar Logo image
-export const navLogo = undefined;
+export const navLogo = "https://ih1.redbubble.net/image.2130082874.2309/st,small,507x507-pad,600x600,f8f8f8.jpg";
 
 // Blog link icon - https://icon-sets.iconify.design/
 export const Blog = <Icon icon="ph:link-bold" />;
@@ -69,19 +69,47 @@ export const skillData = [
   },
   {
     id: 7,
+    skill: <Icon icon="simple-icons:typescript" className="display-4" />,
+    name: "TypeScript",
+  },
+  {
+    id: 8,
+    skill: <Icon icon="skill-icons:mongodb" className="display-4" />,
+    name: "MongoDB",
+  },
+  {
+    id: 9,
+    skill: <Icon icon="teenyicons:nodejs-solid" className="display-4" />,
+    name: "nodeJs",
+  }, {
+    id: 10,
     skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
     name: "Redux",
   },
   {
-    id: 8,
+    id: 11,
     skill: <Icon icon="bi:git" className="display-4" />,
     name: "Git",
   },
   {
-    id: 9,
+    id: 12,
     skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
     name: "GitHub",
+  }, {
+    id: 13,
+    skill: <Icon icon="devicon:express" className="display-4" />,
+    name: "Express",
   },
+  {
+    id: 14,
+    skill: <Icon icon="simple-icons:mongoose" className="display-4" />,
+    name: "Mongoose",
+  },
+  {
+    id: 15,
+    skill: <Icon icon="devicon-plain:reactrouter-wordmark" className="display-4" />,
+    name: "React-Router",
+  }
 ];
 
 // Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
