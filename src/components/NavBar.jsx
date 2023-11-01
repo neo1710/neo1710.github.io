@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
+import resume from "../images/Neeraj_Dubey_Resume_11-09-2023-18-14-56.pdf"
 import styled from "styled-components";
 // Icons
 import { Icon } from "@iconify/react";
@@ -157,7 +158,7 @@ export default function NavBar({ Logo }) {
                       </Nav.Item>
                     );
                   })}
-                  <Button className="nav-link resume">Resume</Button>
+                  <Button className="nav-link resume"><a href={resume} download={"Neeraj_Dubey_Resume"}>Resume</a></Button>
             </Nav>
             <Nav>
               <ThemeToggle />

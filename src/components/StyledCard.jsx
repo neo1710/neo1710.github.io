@@ -44,17 +44,18 @@ export default function StyledCard({ image, name, description, url, demo }) {
           className="mx-auto"
         />
         <Card.Body className="overflow-auto text-center">
-          <Card.Title>{name}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+          <Card.Title className="project-title">{name}</Card.Title>
+          <Card.Text className="project-description">{description}</Card.Text>
+          <Card.Text className="project-tech-stack">Tech-stacks Used : React, Redux , React-Router-Dom, Chakra UI, etc</Card.Text>
           {demo !== "" ? (
-            <Card.Link href={demo}>
+            <Card.Link className="project-deployed-link" href={demo}>
               {"Live Demo "}
               <Icon icon="icon-park-outline:code-computer" />
             </Card.Link>
           ) : null}
         </Card.Body>
         <Card.Footer className="text-center">
-          <Card.Link href={url}>
+          <Card.Link className="project-github-link" href={url}>
             {"View on GitHub "}
             <Icon icon="icomoon-free:github" />
           </Card.Link>

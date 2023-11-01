@@ -21,9 +21,9 @@ export default function Skills() {
             {skillData.map((skills) => {
               return (
                 <Col xs={4} key={skills.id} className="my-md-5 skills-card">
-                  <figure>
+                  <figure className="skills-card-img">
                     {skills.skill}
-                    <figcaption>{skills.name}</figcaption>
+                    <figcaption className="skills-card-name">{skills.name}</figcaption>
                   </figure>
                 </Col>
               );

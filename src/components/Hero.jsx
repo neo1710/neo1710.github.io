@@ -90,6 +90,8 @@ export default function Hero() {
           <Col>
             <h1 id="user-detail-name" className="mb-3 display-3 title">{name}</h1>
             <h2 className="fswd">Full Stack Web Developer</h2>
+            <p id="contact-phone">Contact no. - +91 93544404877 </p>
+            <p  id="contact-email">Email - neeraj3dworld@gmail.com</p>
             <div className="d-flex align-items-center justify-content-center">
               <SocialLinks />
             </div>

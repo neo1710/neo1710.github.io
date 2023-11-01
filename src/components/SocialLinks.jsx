@@ -11,6 +11,7 @@ const StyledSocialLinks = styled.div`
   a {
     margin: 0 1rem;
   }
+ 
 `;
 
 export default function SocialLinks() {
@@ -19,12 +20,22 @@ export default function SocialLinks() {
   return (
     <StyledSocialLinks>
       <a
+      id="contact-github"
         href={html_url}
         aria-label="Check out my GitHub profile."
         className="link-icons"
       >
         <Icon icon="icomoon-free:github" />
       </a>
+      <a
+      id="contact-linkedin"
+        href="https://www.linkedin.com/in/neeraj-dubey-710839231/"
+        aria-label="Check out my linkedIn profile."
+        className="link-icons"
+      >
+        <Icon icon="mdi:linkedin" />
+      </a>
+      
       {blog && (
         <a href={blog} aria-label="External link" className="link-icons">
           {Blog}
