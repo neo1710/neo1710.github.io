@@ -159,7 +159,9 @@ export default function NavBar({ Logo }) {
                       </Nav.Item>
                     );
                   })}
-                  <Button className="nav-link resume"><a href={resume} download={"Neeraj_Dubey_Resume"}>Resume</a></Button>
+                  <Button className="nav-link resume">
+                    <a id="resume-button-1" href={resume} download={"Neeraj_Dubey_Resume"}>Resume</a>
+                    </Button>
             </Nav>
             <Nav>
               <ThemeToggle />

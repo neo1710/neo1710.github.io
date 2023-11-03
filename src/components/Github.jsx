@@ -17,11 +17,11 @@ export const Github=()=>{
 <GitHubCalendar username="neo1710"/>
 </div>
 
-<a id="github-streak-stats" style={{marginTop:"10px"}} href="https://git.io/streak-stats">
-        <img src="https://github-readme-streak-stats.herokuapp.com?user=neo1710" alt="GitHub Streak" />
+<a style={{marginTop:"10px"}} href="https://git.io/streak-stats">
+        <img id="github-streak-stats" src="https://github-readme-streak-stats.herokuapp.com?user=neo1710" alt="GitHub Streak" />
         </a><br />
 
-        <picture id="github-stats-card">
+        <picture>
   <source
     srcset="https://github-readme-stats.vercel.app/api?username=neo1710&show_icons=true&theme=dark"
     media="(prefers-color-scheme: dark)"
@@ -30,11 +30,11 @@ export const Github=()=>{
     srcset="https://github-readme-stats.vercel.app/api?username=neo1710&show_icons=true"
     media="(prefers-color-scheme: light), (prefers-color-scheme: no-preference)"
   />
-  <img src="https://github-readme-stats.vercel.app/api?username=neo1710&show_icons=true" alt="none"/>
+  <img id="github-stats-card" src="https://github-readme-stats.vercel.app/api?username=neo1710&show_icons=true" alt="none"/>
 </picture><br/>
-<picture id="github-top-langs">
+<picture >
 
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=neo1710&layout=donut" alt="none"/>
+  <img id="github-top-langs" src="https://github-readme-stats.vercel.app/api/top-langs/?username=neo1710&layout=donut" alt="none"/>
 </picture><br/>
 
         </DIV>
