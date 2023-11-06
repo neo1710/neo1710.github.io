@@ -55,6 +55,7 @@ div{
  }   
 img{
     display: block;
+    width: 50%;
     margin: auto;
   margin-top:15px;
 }

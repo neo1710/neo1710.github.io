@@ -90,8 +90,8 @@ export default function NavBar({ Logo }) {
       { id: "2T", name: "About Me", to: "About", test:"about" },
       { id: "3T", name: "Skills", to: "Skills",test:"skills" },
       { id: "4T", name: "Projects", to: "Projects",test:"projects" },
-      { id: "5T", name: "Contact", to: "Contact",test:"contact" },
-      {id: "5T", name: "GitHub", to: "GitHub",test:"github"}
+      { id: "5T", name: "GitHub", to: "GitHub",test:"github" },
+      {id: "6T", name: "Contact", to: "Contact",test:"contact"}
     ],
   };
 
@@ -159,9 +159,9 @@ export default function NavBar({ Logo }) {
                       </Nav.Item>
                     );
                   })}
-                  <Button className="nav-link resume">
+                <a href={resume}>  <Button className="nav-link resume">
                     <a id="resume-button-1" href={resume} download={"Neeraj_Dubey_Resume"}>Resume</a>
-                    </Button>
+                    </Button></a>
             </Nav>
             <Nav>
               <ThemeToggle />
