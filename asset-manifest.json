@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c6aea74a.css",
-    "main.js": "/static/js/main.967666d8.js",
+    "main.js": "/static/js/main.1ff3a54a.js",
     "static/media/styleSpot.png": "/static/media/styleSpot.8d7793ccdd3ff435d442.png",
     "static/media/Neeraj_Dubey_Resume_11-09-2023-18-14-56.pdf": "/static/media/Neeraj_Dubey_Resume_11-09-2023-18-14-56.d1e9ac8f97e4f6d85cf6.pdf",
     "static/media/hero-dark.jpg": "/static/media/hero-dark.37f2556d620821979e99.jpg",
@@ -14,10 +14,10 @@
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.c6aea74a.css.map": "/static/css/main.c6aea74a.css.map",
-    "main.967666d8.js.map": "/static/js/main.967666d8.js.map"
+    "main.1ff3a54a.js.map": "/static/js/main.1ff3a54a.js.map"
   },
   "entrypoints": [
     "static/css/main.c6aea74a.css",
-    "static/js/main.967666d8.js"
+    "static/js/main.1ff3a54a.js"
   ]
 }
