@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { Blog } from "../data";
 // Icons
 import { Icon } from '@iconify/react';
-
+import resume from "../images/Neeraj_Dubey_Resume_11-09-2023-18-14-56.pdf"
 const StyledSocialLinks = styled.div`
   a {
     margin: 0 1rem;
@@ -34,6 +34,15 @@ export default function SocialLinks() {
         className="link-icons"
       >
         <Icon icon="mdi:linkedin" />
+      </a>
+      <a
+      id="resume-link-2"
+        href={resume}
+        download={"Neeraj_Dubey_Resume"}
+        aria-label="Check out my resume."
+        className="link-icons"
+      >
+        <Icon icon="mdi:resume" />
       </a>
       
       {blog && (

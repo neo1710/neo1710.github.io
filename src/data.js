@@ -6,6 +6,7 @@ import Logo from "./images/logo.svg";
 import image1 from "./images/charityHero.png";
 import image3 from "./images/techbazaar.png";
 import image2 from "./images/styleSpot.png";
+import image4 from "./images/shopaholics.png";
 // Hero Images (add your images to the /images directory with the same names)
 import HeroLight from "./images/hero-light.jpg";
 import HeroDark from "./images/hero-dark.jpg";
@@ -119,12 +120,12 @@ export const resume = null;
  ************************************************************** 
   List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
 */
-export const filteredProjects = ["tart-clover-1298", "StyleSpot", "-remarkable-ic"];
+export const filteredProjects = ["CharityHero", "StyleSpot", "Techbazaar","Shopaholics"];
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 4-5)
 export const projectCardImages = [
   {
-    name: "tart-clover-1298",
+    name: "CharityHero",
     image: image1,
   },
   {
@@ -132,8 +133,12 @@ export const projectCardImages = [
     image: image2,
   },
   {
-    name: "-remarkable-ic",
+    name: "Techbazaar",
     image: image3,
+  },
+  {
+    name: "Shopaholics",
+    image: image4
   }
 ];
 
