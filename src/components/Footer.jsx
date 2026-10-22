@@ -4,13 +4,14 @@ import SocialLinks from "./SocialLinks";
 
 const StyledFooter = styled.footer`
   min-height: var(--min-footer-height);
-  background: var(--primary);
+  border-top: 1px solid ${({ theme }) => theme.name === "light" ? "#dce3d9" : "#314037"};
+  background: ${({ theme }) => theme.name === "light" ? "#eaf0e7" : "#1d2b22"};
 
   a {
-    color: #45413c;
+    color: ${({ theme }) => theme.color};
 
     &:hover {
-      color: #fbfdff;
+      color: ${({ theme }) => theme.name === "light" ? "#587b31" : "#c2e68a"};
     }
   }
 `;

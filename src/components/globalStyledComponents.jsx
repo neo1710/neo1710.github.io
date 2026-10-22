@@ -27,7 +27,7 @@ export const Loading = styled.div`
   height: 5rem;
   border: 5px solid;
   border-radius: 50%;
-  border-top-color: var(--primary);
+  border-top-color: var(--accent-strong);
   margin: 1rem auto;
   animation: ${spinner} 0.6s linear infinite;
 `;
@@ -35,42 +35,47 @@ export const Loading = styled.div`
 // Titles
 export const Title = styled.div`
   display: inline-block;
-  margin: 0 auto;
-  font-family: "Permanent Marker";
-  text-align: center;
+  margin: 0 0 2.5rem;
+  text-align: left;
 
   .underline {
-    height: 0.25rem;
-    width: 75%;
-    min-width: 3rem;
-    border-radius: 0.25rem;
-    background: var(--clr-primary-5);
-    margin: 0 auto 1.5rem auto;
-    background: ${({ theme }) =>
-      theme.name === "light"
-        ? "linear-gradient(to left, var(--primary-light), var(--primary-dark))"
-        : "linear-gradient(to right, var(--primary-dark), var(--primary-light))"};
+    height: 3px;
+    width: 3.5rem;
+    border-radius: 2px;
+    background: var(--accent-strong);
+    margin: 1rem 0 0;
   }
 `;
 
 // Back to top link
 const StyledDiv = styled.div`
   position: fixed;
-  bottom: calc(var(--min-footer-height) + 1.5rem);
-  right: 1.5rem;
-  visibility: hidden;
+  bottom: calc(var(--min-footer-height) + 1.25rem);
+  right: 1.25rem;
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 180ms ease;
 
   .link-icons {
-    color: ${({ theme }) => (theme.name === "light" ? "#45413C" : "#F5F2E8")};
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid ${({ theme }) => theme.name === "light" ? "#d4ded1" : "#526352"};
+    border-radius: 50%;
+    color: ${({ theme }) => theme.color};
+    background: ${({ theme }) => theme.name === "light" ? "#fff" : "#26362b"};
   }
 
   &.show-up {
-    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 `;
 
 export function BackToTop({ home }) {
-  const [scrollY, setScrollY] = React.useState("");
+  const [scrollY, setScrollY] = React.useState(0);
   const up = React.useRef(null);
 
   React.useEffect(
@@ -78,22 +83,17 @@ export function BackToTop({ home }) {
       function updateScrollY() {
         setScrollY(window.pageYOffset);
 
-        if (scrollY > 500) {
-          up.current.classList.add("show-up");
-        } else {
-          up.current.classList.remove("show-up");
-        }
       }
 
       window.addEventListener("scroll", updateScrollY);
 
       return () => window.removeEventListener("scroll", updateScrollY);
     },
-    [scrollY]
+    []
   );
 
   return (
-    <StyledDiv ref={up}>
+    <StyledDiv ref={up} className={scrollY > 500 ? "show-up" : ""}>
       <Link to={home} className="link-icons">
         <Icon icon="fa6-solid:circle-chevron-up" />
       </Link>

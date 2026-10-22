@@ -41,7 +41,11 @@ export const allProjectsSlice = createSlice({
       })
       .addCase(fetchGitHubReops.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.data = action.payload;
+        state.data = [...action.payload].sort(
+          (first, second) =>
+            new Date(second.pushed_at || second.updated_at) -
+            new Date(first.pushed_at || first.updated_at)
+        );
         projectCardImages.forEach(function (element) {
           state.data.forEach((el, i) => {
             if (element.name.toLowerCase() === el.name.toLowerCase()) {

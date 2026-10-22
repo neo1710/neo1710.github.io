@@ -3,10 +3,9 @@ import { useSelector } from "react-redux";
 import { selectData } from "../pages/homeSlice";
 import styled from "styled-components";
 // Data
-import { Blog } from "../data";
+import { Blog, resume } from "../data";
 // Icons
 import { Icon } from '@iconify/react';
-import resume from "../images/Neeraj_Dubey_Resume_11-09-2023-18-14-56.pdf"
 const StyledSocialLinks = styled.div`
   a {
     margin: 0 1rem;

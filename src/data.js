@@ -1,52 +1,38 @@
 // Skills icons - https://icon-sets.iconify.design/
 import { Icon } from "@iconify/react";
+import resumeFile from "./images/Neeraj Dubey - Resume.pdf";
 
 // Projects Images (add your images to the images directory and import below)
-import Logo from "./images/logo.svg";
 import image1 from "./images/charityHero.png";
 import image3 from "./images/techbazaar.png";
 import image2 from "./images/styleSpot.png";
 import image4 from "./images/shopaholics.png";
-// Hero Images (add your images to the /images directory with the same names)
-import HeroLight from "./images/hero-light.jpg";
-import HeroDark from "./images/hero-dark.jpg";
-// If you change the import names above then you need to change the export names below
-export { HeroLight as Light };
-export { HeroDark as Dark };
-
 /* START HERE
  **************************************************************
   Add your GitHub username (string - "YourUsername") below.
 */
 export const githubUsername = "neo1710";
 
-// Navbar Logo image
-export const navLogo = "https://ih1.redbubble.net/image.2130082874.2309/st,small,507x507-pad,600x600,f8f8f8.jpg";
-
 // Blog link icon - https://icon-sets.iconify.design/
 export const Blog = <Icon icon="ph:link-bold" />;
 
-/* About Me
- **************************************************************
-  Add a second paragraph for the about me section.
-*/
-export const moreInfo =
-  "I enjoy learning about technology and helping others use it to improve their lives and be more productive. I built this site with React, React Bootstrap, Redux, and the GitHub REST API.";
+export const professionalSummary =
+  "Full Stack Software Engineer with 2+ years of experience building AI-powered web applications using Next.js, React, Node.js, NestJS, and TypeScript.";
 
-/* Skills
- ************************************************************** 
-  Add or remove skills in the SAME format below, choose icons here - https://icon-sets.iconify.design/
-*/
+export const moreInfo =
+  "At FluidAI, I build production-ready AI interfaces, conversational features, and agentic workflows. My recent work connects modern web experiences to LLM services and Python-powered retrieval systems.";
+
+/* Skills reflected in the latest résumé and recent projects. */
 export const skillData = [
   {
     id: 1,
-    skill: <Icon icon="mdi:language-html5" className="display-4" />,
-    name: "HTML5",
+    skill: <Icon icon="simple-icons:typescript" className="display-4" />,
+    name: "TypeScript",
   },
   {
     id: 2,
-    skill: <Icon icon="ion:logo-css3" className="display-4" />,
-    name: "CSS3",
+    skill: <Icon icon="logos:python" className="display-4" />,
+    name: "Python",
   },
   {
     id: 3,
@@ -55,72 +41,161 @@ export const skillData = [
   },
   {
     id: 4,
-    skill: <Icon icon="ri:bootstrap-fill" className="display-4" />,
-    name: "BootStrap",
+    skill: <Icon icon="simple-icons:nextdotjs" className="display-4" />,
+    name: "Next.js",
   },
   {
     id: 5,
+    skill: <Icon icon="mdi:brain" className="display-4" />,
+    name: "AI & RAG",
+  },
+  {
+    id: 6,
     skill: <Icon icon="mdi:react" className="display-4" />,
     name: "React",
   },
   {
-    id: 6,
-    skill: <Icon icon="file-icons:styledcomponents" className="display-4" />,
-    name: "Styled Components",
-  },
-  {
     id: 7,
-    skill: <Icon icon="simple-icons:typescript" className="display-4" />,
-    name: "TypeScript",
+    skill: <Icon icon="devicon:tailwindcss" className="display-4" />,
+    name: "Tailwind CSS",
   },
   {
     id: 8,
+    skill: <Icon icon="simple-icons:chakraui" className="display-4" />,
+    name: "Chakra UI",
+  },
+  {
+    id: 9,
+    skill: <Icon icon="mdi:language-html5" className="display-4" />,
+    name: "HTML",
+  },
+  {
+    id: 10,
+    skill: <Icon icon="mdi:language-css3" className="display-4" />,
+    name: "CSS",
+  },
+  {
+    id: 11,
+    skill: <Icon icon="devicon:nestjs" className="display-4" />,
+    name: "NestJS",
+  },
+  {
+    id: 12,
+    skill: <Icon icon="teenyicons:nodejs-solid" className="display-4" />,
+    name: "Node.js",
+  },
+  {
+    id: 13,
+    skill: <Icon icon="devicon:express" className="display-4" />,
+    name: "Express.js",
+  },
+  {
+    id: 14,
+    skill: <Icon icon="simple-icons:fastapi" className="display-4" />,
+    name: "FastAPI",
+  },
+  {
+    id: 15,
+    skill: <Icon icon="mdi:api" className="display-4" />,
+    name: "REST APIs",
+  },
+  {
+    id: 16,
     skill: <Icon icon="skill-icons:mongodb" className="display-4" />,
     name: "MongoDB",
   },
   {
-    id: 9,
-    skill: <Icon icon="teenyicons:nodejs-solid" className="display-4" />,
-    name: "nodeJs",
-  }, {
-    id: 10,
-    skill: <Icon icon="akar-icons:redux-fill" className="display-4" />,
-    name: "Redux",
-  },
-  {
-    id: 11,
-    skill: <Icon icon="bi:git" className="display-4" />,
-    name: "Git",
-  },
-  {
-    id: 12,
-    skill: <Icon icon="fa6-brands:square-github" className="display-4" />,
-    name: "GitHub",
-  }, {
-    id: 13,
-    skill: <Icon icon="devicon:express" className="display-4" />,
-    name: "Express",
-  },
-  {
-    id: 14,
+    id: 17,
     skill: <Icon icon="simple-icons:mongoose" className="display-4" />,
     name: "Mongoose",
   },
   {
-    id: 15,
-    skill: <Icon icon="devicon-plain:reactrouter-wordmark" className="display-4" />,
-    name: "React-Router",
-  }
+    id: 18,
+    skill: <Icon icon="logos:postgresql" className="display-4" />,
+    name: "PostgreSQL",
+  },
+  {
+    id: 19,
+    skill: <Icon icon="simple-icons:prisma" className="display-4" />,
+    name: "Prisma",
+  },
+  {
+    id: 20,
+    skill: <Icon icon="simple-icons:langchain" className="display-4" />,
+    name: "LangChain",
+  },
+  {
+    id: 21,
+    skill: <Icon icon="simple-icons:qdrant" className="display-4" />,
+    name: "Qdrant",
+  },
+  {
+    id: 22,
+    skill: <Icon icon="mdi:magnify" className="display-4" />,
+    name: "FAISS",
+  },
+  {
+    id: 23,
+    skill: <Icon icon="mdi:vector-combine" className="display-4" />,
+    name: "Sentence Transformers",
+  },
+  {
+    id: 24,
+    skill: <Icon icon="mdi:vector-polyline" className="display-4" />,
+    name: "Vector Search",
+  },
+  {
+    id: 25,
+    skill: <Icon icon="mdi:vector-arrange-below" className="display-4" />,
+    name: "Embeddings",
+  },
+  {
+    id: 26,
+    skill: <Icon icon="mdi:robot-outline" className="display-4" />,
+    name: "LLM Integrations",
+  },
+  {
+    id: 27,
+    skill: <Icon icon="mdi:chat-processing-outline" className="display-4" />,
+    name: "Prompt Engineering",
+  },
+  {
+    id: 28,
+    skill: <Icon icon="simple-icons:redux" className="display-4" />,
+    name: "Redux Toolkit",
+  },
+  {
+    id: 29,
+    skill: <Icon icon="mdi:react" className="display-4" />,
+    name: "React Native",
+  },
+  {
+    id: 30,
+    skill: <Icon icon="mdi:docker" className="display-4" />,
+    name: "Docker",
+  },
+  {
+    id: 31,
+    skill: <Icon icon="bi:git" className="display-4" />,
+    name: "Git & GitHub",
+  },
+  {
+    id: 32,
+    skill: <Icon icon="mdi:code-braces" className="display-4" />,
+    name: "Data Structures & Algorithms",
+  },
 ];
 
-// Resume link (string - "https://YourResumeUrl") - I am using CloudFront to share my resume (https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html)
-export const resume = null;
+export const resume = resumeFile;
 
-/* Projects
- ************************************************************** 
-  List the repo names (string - "your-repo-name") you want to include (they will be sorted alphabetically). If empty, only the first 3 will be included.
-*/
-export const filteredProjects = ["CharityHero", "StyleSpot", "Techbazaar","Shopaholics"];
+/* Number of recently updated repositories featured on the home page. */
+export const featuredProjectCount = 3;
+
+export const contactDetails = {
+  email: "neeraj3dworld@gmail.com",
+  phone: "9354404877",
+  location: "Delhi, India",
+};
 
 // Replace the defualt GitHub image for matching repos below (images imported above - lines 4-5)
 export const projectCardImages = [

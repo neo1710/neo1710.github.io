@@ -198,6 +198,7 @@ export default function AllProjects() {
                       description,
                       html_url,
                       homepage,
+                      language,
                     }) {
                       return (
                         <Col key={id}>
@@ -207,6 +208,7 @@ export default function AllProjects() {
                             description={description}
                             url={html_url}
                             demo={homepage}
+                            language={language}
                           />
                         </Col>
                       );
@@ -218,6 +220,7 @@ export default function AllProjects() {
                       description,
                       html_url,
                       homepage,
+                      language,
                     }) {
                       return (
                         <Col key={id}>
@@ -227,6 +230,7 @@ export default function AllProjects() {
                             description={description}
                             url={html_url}
                             demo={homepage}
+                            language={language}
                           />
                         </Col>
                       );

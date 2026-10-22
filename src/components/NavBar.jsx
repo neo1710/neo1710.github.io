@@ -1,83 +1,32 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useAppContext } from "../appContext";
 import { Link as ScrollLink } from "react-scroll";
 import { Link, useLocation } from "react-router-dom";
-import resume from "../images/Neeraj_Dubey_Resume_11-09-2023-18-14-56.pdf"
 import styled from "styled-components";
+import { resume } from "../data";
 // Icons
 import { Icon } from "@iconify/react";
 // Components
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-// Images
-import Logo from "./defaultNavLogo.svg";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
 // #region styled-components
-const StyledSwitch = styled.label`
-  /* Slider pill */
-  display: flex;
-  width: 3.2rem;
-  font-size: 1.5rem;
-  border-radius: 30px;
-  transition: var(--transition);
-  border: 2px solid;
-
-  /* Hide defualt checkbox */
-  input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    opacity: 0;
-  }
-
-  /* Move span when checked */
-  input[type="checkbox"]:checked + div {
-    transform: translateX(100%);
-  }
-
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--transition);
-  }
-`;
-
 const FixedNavSpacer = styled.div`
   height: var(--nav-height);
 `;
 
 function ThemeToggle() {
-  const { theme, toggleTheme, closeExpanded } = useAppContext();
+  const { theme, toggleTheme } = useAppContext();
 
   return (
-    <StyledSwitch onClick={closeExpanded}>
-      <input
-        type="checkbox"
-        aria-label={`Toggle theme, currently ${theme}.`}
-        onClick={toggleTheme}
-      />
-      <div>
-        {theme === "light" ? (
-          <Icon icon="game-icons:sunflower" />
-        ) : (
-          <Icon icon="game-icons:moon" />
-        )}
-      </div>
-    </StyledSwitch>
+    <button className="theme-toggle" type="button" onClick={toggleTheme} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`} title="Switch theme">
+      <Icon icon={theme === "light" ? "solar:moon-linear" : "solar:sun-2-linear"} />
+    </button>
   );
 }
 // #endregion
 
 // #region component
-const propTypes = {
-  Logo: PropTypes.node.isRequired,
-};
-
-const defaultProps = {
-  Logo: Logo,
-};
-
-export default function NavBar({ Logo }) {
+export default function NavBar() {
   const { theme, isExpanded, closeExpanded, toggleExpanded } = useAppContext();
   const { pathname } = useLocation();
   const navLinks = {
@@ -108,14 +57,8 @@ export default function NavBar({ Logo }) {
         fixed="top"
       >
         <Container>
-          <Navbar.Brand>
-            <img
-              alt="Logo"
-              src={Logo}
-              width="35"
-              height="35"
-              className="rounded-circle"
-            />
+          <Navbar.Brand as={Link} to="/" aria-label="Neeraj Dubey home">
+            ND<span className="brand-period">.</span>
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"
@@ -159,9 +102,9 @@ export default function NavBar({ Logo }) {
                       </Nav.Item>
                     );
                   })}
-                <a href={resume}>  <Button className="nav-link resume">
-                    <a id="resume-button-1" href={resume} download={"Neeraj_Dubey_Resume"}>Resume</a>
-                    </Button></a>
+                <Nav.Link id="resume-button-1" href={resume} download="Neeraj_Dubey_Resume" className="resume-link">
+                  Resume <Icon icon="solar:download-linear" />
+                </Nav.Link>
             </Nav>
             <Nav>
               <ThemeToggle />
@@ -172,7 +115,4 @@ export default function NavBar({ Logo }) {
     </>
   );
 }
-
-NavBar.propTypes = propTypes;
-NavBar.defaultProps = defaultProps;
 // #endregion

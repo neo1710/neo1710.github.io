@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppContext } from "../appContext";
 import { useSelector } from "react-redux";
 import {
@@ -9,7 +8,7 @@ import {
 import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
 // Data
-import { filteredProjects } from "../data";
+import { featuredProjectCount } from "../data";
 // Icons
 import { Icon } from "@iconify/react";
 // Components
@@ -18,29 +17,11 @@ import { Title, Loading } from "./globalStyledComponents";
 import StyledCard from "./StyledCard";
 
 export default function Projects() {
-  const [mainProjects, setMainProjects] = React.useState([]);
   const { theme } = useAppContext();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
   const data = useSelector(selectData);
-console.log(data);
-  React.useEffect(
-    function () {
-      const tempData = [];
-      data.forEach((el, i) => (tempData[i] = Object.create(el)));
-      if (data.length !== 0 && filteredProjects.length !== 0) {
-        const tempArray = tempData.filter((obj) =>
-          filteredProjects.includes(obj.name)
-        );
-        tempArray.length !== 0
-          ? setMainProjects([...tempArray])
-          : setMainProjects([...tempData.slice(0, 3)]);
-      } else {
-        setMainProjects([...tempData.slice(0, 3)]);
-      }
-    },
-    [data]
-  );
+  const mainProjects = data.slice(0, featuredProjectCount);
 
   return (
     <Element name={"Projects"} 
@@ -74,6 +55,7 @@ console.log(data);
                   description,
                   html_url,
                   homepage,
+                  language,
                 }) {
                   return (
                     <Col key={id}>
@@ -83,12 +65,13 @@ console.log(data);
                         description={description}
                         url={html_url}
                         demo={homepage}
+                        language={language}
                       />
                     </Col>
                   );
                 })}
               </Row>
-              {data.length > 3 && (
+              {data.length > featuredProjectCount && (
                 <Container className="text-center mt-5">
                   <Link to="/All-Projects">
                     <Button
